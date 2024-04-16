@@ -1,0 +1,12 @@
+<%- include('partials/navigation') %>
+
+<h2>Books List</h2>
+
+<% books.forEach(book => { %>
+    <div>
+        <p>Title: <%= book.title %></p>
+        <p>Author: <%= book.author %></p>
+        <p>Publishing Year: <%= book.publishingYear %></p>
+        <a href="/book/<%= book.id %>">Details</a>
+    </div>
+<% }) %>

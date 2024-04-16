@@ -1,0 +1,10 @@
+<% books.forEach((book) => { %>
+    <div>
+        <h2><%= book.title %></h2>
+        <p><strong>Author:</strong> <%= book.author %></p>
+        <p><strong>Publishing Year:</strong> <%= book.publishingYear %></p>
+        <form action="/book/delete/<%= book.id %>" method="post">
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+<% }); %>
